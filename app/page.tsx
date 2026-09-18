@@ -30,9 +30,6 @@ export default function Page() {
         <div className="hero-placeholder">
           <img
             className="hero-image"
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_Capture_-_2026-09-16_-_20-49-46-Ix7W7LeW2qOYa94pY1AqCqVVYWo0rz.png"
             alt="Quatro modelos usando lingerie em uma composição promocional Boomerang"
           />
@@ -123,11 +120,11 @@ export default function Page() {
                                       ? '/7b2af992c52282424144af69ec058944.mp4'
                                       : '/7b2af992c52282424144af69ec058944.mp4'
                       }
-                      autoPlay={label === 'Mais Popular'}
+                      autoPlay
                       muted
                       loop
                       playsInline
-                      preload="none"
+                      preload="metadata"
                       aria-label={`Vídeo do card ${index + 1} da seção ${label}`}
                     />
                   ) : (
