@@ -8,6 +8,17 @@ const sections = [
   ['Favoritos', 'Os mais procurados 3.500 Kz', 4],
 ]
 
+const checkoutLinks: Record<string, string> = {
+  'Mais Popular': 'https://standerpay.com/checkout/53c10a3f-1a16-449e-88e3-e971f0baa672',
+  'Mais Quente': 'https://standerpay.com/checkout/ea41200b-2369-4c68-9bc9-dc84b05696bf',
+  Festas: 'https://standerpay.com/checkout/66fc2c52-c304-4bf7-8eba-36abd5c9459c',
+  'Pacote Premium': 'https://standerpay.com/checkout/b1ea8391-4981-4c49-ad0a-2ad611f38013',
+  Extremo: 'https://standerpay.com/checkout/c89ff824-f459-4244-b8c7-464617e2122d',
+  Picante: 'https://standerpay.com/checkout/02181d3a-4404-4532-8f0f-0906afe2eeae',
+  Favoritos: 'https://standerpay.com/checkout/c475c0b8-599f-4be0-96e5-5773691540d2',
+}
+
+
 function PlayIcon() {
   return <span className="play-icon" aria-hidden="true"><span /></span>
 }
@@ -35,10 +46,10 @@ export default function Page() {
               <h2>{label}</h2>
               <div className="section-offer">
                 <p>{detail} <span aria-hidden="true">▧</span></p>
-                {label === 'Mais Popular' && (
+                {checkoutLinks[label] && (
                   <a
                     className="checkout-button"
-                    href="https://standerpay.com/checkout/53c10a3f-1a16-449e-88e3-e971f0baa672"
+                    href={checkoutLinks[label]}
                     target="_blank"
                     rel="noreferrer"
                   >
