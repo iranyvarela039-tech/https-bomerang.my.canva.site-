@@ -14,6 +14,8 @@ const checkoutLinks: Record<string, string> = {
   Festas: 'https://standerpay.com/checkout/66fc2c52-c304-4bf7-8eba-36abd5c9459c',
   'Pacote Premium': 'https://standerpay.com/checkout/b1ea8391-4981-4c49-ad0a-2ad611f38013',
   Extremo: 'https://standerpay.com/checkout/c89ff824-f459-4244-b8c7-464617e2122d',
+  Picante: 'https://standerpay.com/checkout/02181d3a-4404-4532-8f0f-0906afe2eeae',
+  Favoritos: 'https://standerpay.com/checkout/c475c0b8-599f-4be0-96e5-5773691540d2',
 }
 
 
