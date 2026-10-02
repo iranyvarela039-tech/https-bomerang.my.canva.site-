@@ -61,7 +61,7 @@ export default function Page() {
             <div className="video-grid">
               {Array.from({ length: count as number }).map((_, index) => (
                 <article className="video-card" key={`${label}-${index}`}>
-                  {(label === 'Mais Popular' && index < 6) || (label === 'Mais Quente' && index < 4) || (label === 'Festas' && index < 4) || (label === 'Pacote Premium' && index < 4) || (label === 'Extremo' && index < 4) || (label === 'Picante' && index < 4) || (label === 'Favoritos' && index < 4) ? (
+                  {false ? (
                     <video
                       className="card-video"
                       src={
