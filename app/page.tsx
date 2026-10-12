@@ -8,6 +8,27 @@ const sections = [
   ['Favoritos', 'Os mais procurados 3.500 Kz', 4],
 ]
 
+const videoSources: Record<string, string[]> = {
+  'Mais Popular': [
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cellparrish_584p_20261002_142547-YTFxaqVbSucBskb1rPLtPF5HqrhIs4.mp4',
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/haitianbratxxx_568p_20261007_012552%20%281%29%20%281%29-2YV0CegiVcJNVvKukNuaMbx2cY7ZPI.mp4',
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/itsshot_ziii_568p_20261008_185220-6WwMd40oBDoSDFFhntpstoCGjGljnl.mp4',
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Itsadizasankofa_1280p_20260921_154959%20%281%29-okNW9qDqhyalChxA4rV9xqMChQs3v9.mp4',
+  ],
+  'Mais Quente': [
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/jaysquirt75_1280p_20260921_044541-zpy0md5ZArsNKKRWRCXzg5liWQBa5t.mp4',
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lipgglossbunny_1280p_20260918_112552-IZ7SWyTqQPqXKUFNnwk188xbIUKgFK.mp4',
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/minxmilliyon_568p_20261007_010725%20%281%29%20%281%29-bcwgXyMq76pdmhDrl0EolyjasqfGnL.mp4',
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PRETTYEVELYN001_1280p_20261007_130701-ZAqiFLqtTeAD6tQA4z57pmwHtKVR49.mp4',
+  ],
+  Festas: [
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mocrystally_564p_20261007_143142-pvgo6ZfguQASvwzEj6I4wqaSyI2nOY.mp4',
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SexxyNutinmexx_948p_20260921_152344-ntNkqMbpJqjWe6U79VxviwZFt3wTan.mp4',
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sexy124_5489_1024p_20260921_040408-FBmyghS3uG9uack9ZMW2nKyDl9ccXz.mp4',
+    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ubukenenibubi_1130p_20261011_225556-HWo4iXVG8KIkAaSMTMeETYriyoQclK.mp4',
+  ],
+}
+
 const checkoutLinks: Record<string, string> = {
   'Mais Popular': 'https://standerpay.com/checkout/53c10a3f-1a16-449e-88e3-e971f0baa672',
   'Mais Quente': 'https://standerpay.com/checkout/ea41200b-2369-4c68-9bc9-dc84b05696bf',
@@ -61,66 +82,11 @@ export default function Page() {
             <div className="video-grid">
               {Array.from({ length: count as number }).map((_, index) => (
                 <article className="video-card" key={`${label}-${index}`}>
-                  {false ? (
+                  {videoSources[label]?.[index] ? (
                     <video
                       className="card-video"
-                      src={
-                        label === 'Festas'
-                          ? [
-                              'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/50e3140dd525c547c0e3fe4ae1035972-NsZWYAewCQbu4OwyusEjWbCsAK1xjn.mp4',
-                              'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8d7c03460d1418d50b5f27a40ebdf925-LxxDBqrWYEO37tf25JpwG87FTZ66pg.mp4',
-                              'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2ef17dde18a50222045833d37b11f2f1-5d4er73UzoWlPjd8AvRcnSypQ05oBo.mp4',
-                              'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/da04bf15899cd1ac7000700844e2334b-iZnkCKD1jaSKUgKC9ZsknBf8BQOZEe.mp4',
-                            ][index]
-                          : label === 'Pacote Premium'
-                            ? [
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1f41a88990492c504969e6e292b2582b-usIP9icUovPjW68e4cEPRqtkVxj5MF.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fda46037ef8a6f0191f4124eb9af1681-FMZeBNfc7o1aIgjjbm5kR1BFpnYdiI.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4b311b67b0c64bf62fbb703272f32def%20%281%29-zPoVy14dzifBvTUzc9PmYtqTapSULL.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6a23a96294dad9c033f8646b9edf68c6-uT35vt961IoxnXBY0GUZvXmMDt5MXc.mp4',
-                              ][index]
-                            : label === 'Extremo'
-                            ? [
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/uri_ifs___V_7sAOH7Bx4sbGbeiOiGzA5X0o8QIhf3uix3W8eHa2dzg-C1P7d7EY2cOi3rY99B4GCQRITdlJl0.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/be363cada73e9e35ec20f9beffde8b94-m5zwPHPo7D5wVmsluLs1hPwLLUSGRY.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cb88d387cbc040a8f3043435a90a1d88-0Zq1GdKc57pE1uI6pyNWTcYpBhrGdL.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/89775abf14fadbcc17fdbb10d66af6e1-UWNQYeC1JLhoeIBm00QTL4wVeMR2PR.mp4',
-                              ][index]
-                            : label === 'Picante'
-                            ? [
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a818de187172865e76f14cd247ab0700-5ZLr8DlaIcXgYgojhKsyH2BRP2vgrQ.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a822512d81293ba360a7c04d3e975ab3-IJeiBuXRZF2Pxk3NfLLxHnSDcrqf1I.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/09268f2cf95db6b39e2aeb55f5d8d6e5-cE47HdL4CPsfjriyhMtYRhFyhFZYdg.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/f3d94c301f35a70659d76160fa2cb85d-Y3XffpNOWvb7wOeIQtcsGNrikTQUdB.mp4',
-                              ][index]
-                            : label === 'Favoritos'
-                            ? [
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/df5c6b76c928a2148bc446354bfc11b2-3AXxSFrYQj1d3et9Min51DQ1qX3Ejg.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/It%27s_still_my_birthday_and_I_have_all_the_cake_%F0%9F%A5%B3__reel__explore__cake__birthdaygirl-6btiZvsEVGfXnY0waEpzu6ksA7MS4F.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/You_coming__%F0%9F%96%A4-1DKMXAiXwi50bSCUSGJvR338kmawDz.mp4',
-                                'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/you%E2%80%99re_out_with_the_boys_%26_I_send_you_this%2C_wyd_%20%281%29-VCrpH6jENeD4ygHnOOuJDoDrMfH0MN.mp4',
-                              ][index]
-                            : label === 'Mais Quente'
-                            ? index === 0
-                              ? '/b7e3605c21dd7b8f6793acf0b46d4778.mp4'
-                              : index === 1
-                                ? '/668162bba9905e828a119632c744c989.mp4'
-                                : index === 2
-                                  ? 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/77ddd38aa0cd003bf60bc691d535e409-NnJDn2tsBvrru7H0NDmE0vNyBUFONJ.mp4'
-                                  : 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/42195861b3865189bc952f114b6f3d57-HUeYiLulpW2aWmfbWBtyfAtcv6qI8i.mp4'
-                            : index === 0
-                              ? '/b61e8fb768700984ec1ddaae9039ec89.mp4'
-                              : index === 1
-                                ? '/3d41fba4454ffa5d691fa959f8f58353.mp4'
-                                : index === 2
-                                  ? '/1044f01e42d42e8721e1c12c6ef05cb3.mp4'
-                                  : index === 3
-                                    ? '/5ad03fb4c020a0c2233ab7f10029e0ed.mp4'
-                                    : index === 4
-                                      ? '/7b2af992c52282424144af69ec058944.mp4'
-                                      : '/7b2af992c52282424144af69ec058944.mp4'
-                      }
-                      autoPlay
+                      src={videoSources[label][index]}
+                      autoPlay={false}
                       muted
                       loop
                       playsInline
